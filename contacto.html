@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto Grupo 12</title>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="Images/Grupo10.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="path/to/line-awesome/css/line-awesome-font-awesome.min.css">
+    <link rel="s<link rel="stylesheet" href="path/to/line-awesome/css/line-awesome-font-awesome.min.css">
+</head>
+
+<body>
+	<script src="/script.js"></script>
+    <header>
+        <nav>
+            <a href="/index.html#inicio">Inicio</a>
+            <a href="quienessomos.html">Quienes somos</a>
+            <a href="servicios.html">Nuestros servicios</a>
+            <a href="contacto.html">Contacto</a>
+			<a href="Cotizacion.html">Cotizacion</a>
+        </nav>
+
+	<div id="inicio" class="wave" style="height: 150px; overflow: hidden;">
+		<svg viewBox="0 0 500 80" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: #fff;"></path>
+        </svg>
+	</div>
+</header>
+
+    <div class="contact_form">
+
+		<div class="formulario">			
+      <center><h1>Formulario de reclamo</h1></center>
+				<center><h4>Escríbenos tu reclamo</h4></center>
+
+
+					<form action="submeter-formulario.php" method="post">				
+
+						
+								<p>
+									<label for="nombre" class="colocar_nombre">Nombre
+										<span class="obligatorio">*</span>
+									</label>
+										<input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+								</p>
+							
+								<p>
+									<label for="email" class="colocar_email">Email
+										<span class="obligatorio">*</span>
+									</label>
+										<input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email ejemplo@hotmail.com">
+								</p>
+						
+								<p>
+									<label for="telefone" class="colocar_telefono">Teléfono
+									</label>
+										<input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+								</p>			
+							
+								<p>
+									<label for="asunto" class="colocar_asunto">Asunto
+										<span class="obligatorio">*</span>
+									</label>
+										<input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+								</p>		
+							
+								<p>
+									<label for="mensaje" class="colocar_mensaje">Mensaje
+										<span class="obligatorio">*</span>
+									</label>                     
+                               		  <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                               	</p>	  								
+							
+								<button type="button" onclick="enviar()">Enviar</button>
+
+								<p class="aviso">
+									<span class="obligatorio"> * </span>Los campos son obligatorios.
+								</p>					
+						
+					</form>
+		</div>	
+	</div>
+
+	<a href="https://api.whatsapp.com/send?phone=00000000" class="whatsapp-float" target="_blank">
+        <img src="/img/iconowsp.jpg" alt="WhatsApp" width="60">
+      </a>
+
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+            <a href="https://www.facebook.com/" target="_blank"> <img src="img/iconofb.png" alt=""> </a>
+        </div>
+ 
+		<div class="content-foo">
+            <a href="https://www.instagram.com/" target="_blank"> <img src="img/iconoinsta.png" alt=""> </a>
+        </div>
+      
+            <div class="content-foo">
+            <a href="https://twitter.com/" target="_blank"> <img src="img/iconotw.png" alt=""> </a>
+        </div>
+        </div>
+        <h2 class="titulo-final">&copy; Derechos reservados | Grupo 12</h2>
+    </footer>
+</body>
+
+</html>
