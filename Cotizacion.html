@@ -31,21 +31,48 @@
                 <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
                     style="stroke: none; fill: #fff;"></path>
             </svg></div>
+
 </header>
 <!--Formulario Cotizacion-->
-<form>
-    <center><h1>Cotizacion</h1></center>
-    <label for="nombre" class="">Nombre
-        <span class="obligatorio">*</span>
-    </label>
-    <input type="text" name="Nombre" id="">
-
-</form>
-
+<h1><center>COTIZACION</center></h1>
 <main>
+    <form id="cotizacion">
+        <label for="nombre">Nombre:
+            <span class="obligatorio">*</span>
+        </label>
+        <input type="text" id="nombre" name="nombre" required>
 
-
-
+        <label for="apellido">Apellido:
+            <span class="obligatorio">*</span>
+        </label>
+        <input type="text" id="apellido" name="apellido" required>
+        
+        <label for="correo">Correo electrónico:
+            <span class="obligatorio">*</span>
+        </label>
+        <input type="text" id="correo" name="correo" required>
+        
+        <label for="telefono">Teléfono:
+            <span class="obligatorio">*</span>
+        </label>
+        <input type="text" id="telefono" name="telefono" required>
+        
+        <label for="servicio">Servicio:
+            <span class="obligatorio">*</span>
+        </label>
+        <select id="servicio" name="servicio" required>
+          <option value="reparacion">Reparación</option>
+          <option value="mantenimiento">Mantenimiento</option>
+          <option value="instalacion">Instalación</option>
+        </select>
+        
+        <label for="mensaje">Mensaje:
+            <span class="obligatorio">*</span>
+        </label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+        
+        <input type="submit" value="Enviar">
+      </form>
 
 </main>
 <!--Icono Contacto Directo Whatssap-->
@@ -68,6 +95,7 @@
         </div>
         </div>
         <h2 class="titulo-final">&copy; Derechos reservados | Grupo 12</h2>
+        <h4 class="titulo-final">&copy; Argentina - 2023</h4>
     </footer>
 </body>
 
