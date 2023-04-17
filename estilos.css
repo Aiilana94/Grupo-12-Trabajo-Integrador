@@ -2,11 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
 }
 
 body {
-    font-family: 'Arial, ';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #efefef;
+    flex-wrap: wrap;
 }
+
+
 
 .contenedor {
     padding: 40px 0;
