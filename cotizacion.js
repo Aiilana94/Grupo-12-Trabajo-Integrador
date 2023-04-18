@@ -1,47 +1,232 @@
 
-//function Resumen() {
-    let nombre = document.getElementById("nom-bre").value;
-    let apellido = document.getElementById("ape-llido").value;
-    let correo = document.getElementById("co-rreo").value;
-    let telefono = document.getElementById("te-lefono").value;
-    let servicio = document.getElementById("ser-vicio").value;
-    let mensaje = document.getElementById("men-saje").value;
+<<!DOCTYPE html>
+<html lang="es">
 
-    let nombreresumen = document.getElementById("nombre-resumen").value;
-    let apellidoresumen = document.getElementById("apellido-resumen").value;
-    let correoresumen = document.getElementById("correo-resumen").value;
-    let telefonoresumen = document.getElementById("telefono-resumen").value;
-    let servicioresumen = document.getElementById("servicio-resumen").value;
-    let mensajeresumen = document.getElementById("mensaje-resumen").value;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>G-12 Servicios Tecnicos</title>
+    <link rel="shortcut icon" href="Images/logo barra.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
 
-    nombreresumen.innerHTML = nombre;
-    apellidoresumen.innerHTML = apellido;
-    correoresumen.innerHTML = correo;
-    telefonoresumen.innerHTML = telefono;
-    servicioresumen.innerHTML = servicio;
-    mensajeresumen.innerHTML = mensaje;
-    
-    let formulario = document.getElementById("cotizare");
-    let Resumen = document.getElementById("Resumen");
-    formulario.classList.add("oculto");
-    formulario.classList.remove("visible");
-    Resumen.classList.add("visible");
-    Resumen.classList.remove("oculto");
-//}
+    <!--html2pdf-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-const input
-function submit() {
-  if (document.getElementById("nom-bre").checkValidity() && document.getElementById("ape-llido").checkValidity() && document.getElementById("co-rreo").checkValidity() && document.getElementById("te-lefono").checkValidity() 
-    && document.getElementById("ser-vicio").checkValidity() && document.getElementById("men-saje").checkValidity()){
-    alert("¡Su mensaje fue enviado exitosamente!");
-      document.getElementById("nom-bre").value = "";
-      document.getElementById("ape-llido").value = "";
-      document.getElementById("co-rreo").value = "";
-      document.getElementById("te-lefono").value = "";
-      document.getElementById("ser-vicio").value = "";
-      document.getElementById("men-saje").value = "";
-    } else {
-      alert("Por favor, completa los campos obligatorios");
-  }
+    <!-- Css -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Js -->
+    <script src="main.js"></script>
+</head>
 
-}
+<body>
+
+<header>
+    <div class="barra">
+        <div class="logo">
+            <img src="Images/logo barra.png" alt="">
+        </div>
+     <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="quienessomos.html">Quienes somos</a>
+        <a href="servicios.html">Nuestros servicios</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="Cotizacion.html">Cotizacion</a>
+</div>  
+
+        <div id="inicio" class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 80" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+
+</header>
+
+<main>
+    <!-- Formulario de Cotizacion -->
+    <section id="cotizacion-form" class="visible">
+        <h1>Cotizacion de Envio</h1>
+        <form>
+            <p>
+          <label for="nombre">Nombre completo *</label>
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Maria Rodriguez"
+          /></p>
+          <p>
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="ejemplo@gmail.com"
+          /></p>
+          <p>
+          <label for="direccion">Direccion *</label>
+          <input
+            type="text"
+            name="direccion"
+            id="direccion"
+            placeholder="Calle Moreno 334"
+          /></p>
+          <p>
+          <label for="ciudad">Ciudad *</label>
+          <input
+            type="text"
+            name="ciudad"
+            id="ciudad"
+            placeholder="Resistencia"
+          /></p>
+          <p>
+          <label for="provincia">Provincia *</label>
+          <input
+            type="text"
+            name="provincia"
+            id="provincia"
+            placeholder="Chaco"
+          /></p>
+          <p>
+          <label for="codigo-postal">Codigo Postal *</label>
+          <input
+            type="text"
+            name="codigo-postal"
+            id="codigo-postal"
+            placeholder="3500"
+          /></p>
+          <p>
+          <label for="valor-declarado">Marca del dispositivo *</label>
+          <input
+            type="text"
+            name="valor-declarado"
+            id="valor-declarado"
+            placeholder="Samsung,, Motorola..."
+          /></p>
+          <p>
+          <label for="tipo-servicio">Servicio *</label>
+          <select name="tipo-servicio" id="tipo-servicio">
+            <option value="reparacion">Reparacion</option>
+            <option value="mantenimiento">Mantenimiento</option>
+            <option value="instalacion">Instalacion</option>
+          </select></p>
+          <p>
+          <label for="observaciones">Observaciones</label>
+          <textarea
+            name="observaciones"
+            id="observaciones"
+            cols="30"
+            rows="10"
+          ></textarea></p>
+          <button type="button" id="ver-resumen" onclick="verResumen()">
+            Ver Resumen
+          </button>
+        </form>
+      </section>
+  
+      <!-- Resumen de Cotizacion -->
+      <section id="resumen" class="oculto">
+        <section>
+          <h1 id="titulo-resumen">Resumen de Cotizacion</h1>
+          <p>
+            <strong>Nombre completo: </strong><span id="nombre-resumen"></span>
+          </p>
+          <p><strong>Email: </strong><span id="email-resumen"></span></p>
+          <p><strong>Direccion: </strong><span id="direccion-resumen"></span></p>
+          <p><strong>Ciudad: </strong><span id="ciudad-resumen"></span></p>
+          <p><strong>Provincia: </strong><span id="provincia-resumen"></span></p>
+          <p>
+            <strong>Codigo Postal: </strong
+            ><span id="codigo-postal-resumen"></span>
+          </p>
+          <p>
+            <strong>Marca del dispositivo: </strong
+            ><span id="valor-declarado-resumen"></span>
+          </p>
+          <p>
+            <strong>Tipo de Servicio: </strong><span id="tipo-servicio-resumen"></span>
+          </p>
+          <p>
+            <strong>Observaciones: </strong
+            ><span id="observaciones-resumen"></span>
+          </p>
+          <h1>
+            <strong>Su cotizacion de </strong> <span id="total-cotizacion"></span>
+          </h1>
+        </section>
+        <!-- Seccion de botones -->
+        <section id="botones">
+          <button type="button" id="volver" onclick="volverForm()">Volver</button>
+          <button type="button" id="guardar" onclick="guardarPDF()">
+            Exportar en PDF
+          </button>
+        </section>
+
+</main>
+<!--Icono Contacto Directo Whatssap-->
+    <a href="https://api.whatsapp.com/send?phone=00000000" class="whatsapp-float" target="_blank">
+        <img src="Images/iconowsp.jpg" alt="WhatsApp" width="60">
+      </a>
+<!--Pie de pagina-->
+<footer>
+    <div class="contenedor-footer">
+        <div class="row element-footer">
+            <div class="col-md mb-2">
+            <h4 class="titulo-final">Acerca de G-12!</h4>
+            <p class="mb-4">
+                Nos dedicamos a la venta de repuestos, accesorios y reparación de teléfonos celulares y tablets. Contamos con servicio técnico especializado. Enviamos a toda la República Argentina.
+            </p>
+            <div class="social_media">
+        <a class="social-icon" href="https://www.facebook.com/" target="_blank"> <img src="Images/iconofb.png" alt=""> </a>
+        <a class="social-icon" href="https://www.instagram.com/" target="_blank"> <img src="Images/iconoinsta.png" alt=""> </a>
+        <a class="social-icon" href="https://twitter.com/" target="_blank"> <img src="Images/iconotw.png" alt=""> </a>
+            </div>
+    </div>
+    <div class="col-md mb-2">
+            <h4 class="titulo-final">
+                Atajos
+            </h4>
+    <ul class="links-foo row p-0">
+        <li class="link-atajo col-6 col-md-12">
+            <a class="link-atajo" href="/index.html">Inicio</a>
+        </li>
+        <li class="link-atajo col-6 col-md-12">
+            <a class="link-atajo" href="/quienessomos.html">Quienes Somos</a>
+        </li>
+        <li class="link-atajo col-6 col-md-12">
+            <a class="link-atajo" href="/servicios.html">Nuestros Servicios</a>
+        </li>
+        <li class="link-atajo col-6 col-md-12">
+            <a class="link-atajo" href="/Cotizacion.html">Cotizacion</a>
+        </li>
+        <li class="link-atajo col-6 col-md-12">
+            <a class="link-atajo" href="/contacto.html">Contacto</a>
+        </li>
+    </ul>
+        </div>
+</div>
+
+    <div class="legal">
+       <h2 class="titulo-foo">&copy; Derechos reservados | Grupo 12</h2>
+        <h2 class="titulo-foo">&copy; Argentina - 2023</h2> 
+    </div>
+    </div>    
+</footer>
+<script src="cotizacion.js"></script>  
+</body>
+
+</html>
